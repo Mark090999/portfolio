@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 interface AboutSectionProps {
@@ -11,15 +10,15 @@ export default function AboutSection({ onResumeClick }: AboutSectionProps) {
   return (
     <section id="about" className="relative min-h-screen bg-[#1E242C] py-20">
       {/* "ABOUT ME" text */}
-      <div className="absolute left-0 right-0 top-8 md:right-6 md:top-1/2 md:-translate-y-1/2 text-center md:text-right">
-        <div className="text-gray-400 tracking-[0.2em] text-sm md:vertical-text">ABOUT ME</div>
+      <div className="absolute right-6 top-1/2 -translate-y-1/2">
+      <div className="vertical-text text-gray-400 tracking-[0.2em] text-sm hidden md:block">ABOUT ME</div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white mb-4 md:hidden">About Me</h2>
+            <div className="text-center text-gray-400 tracking-[0.2em] text-sm md:hidden">ABOUT ME</div>
             <p className="text-white text-lg leading-relaxed">
               Hello! I&apos;m Marco Castillo, a passionate software engineer. I develop web applications, mobile applications,
               and desktop applications. My core skill is based on JavaScript and I love to do most of the things using

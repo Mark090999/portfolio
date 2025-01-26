@@ -38,7 +38,8 @@ export default function ProjectsSection() {
     <section id="portfolio" className="relative min-h-screen bg-[#1E242C] py-20">
       {/* "PORTFOLIO" text */}
       <div className="absolute left-0 right-0 top-8 md:left-6 md:top-1/2 md:-translate-y-1/2 text-center md:text-left">
-        <div className="text-gray-400 tracking-[0.2em] text-sm md:vertical-text md:rotate-180">PORTFOLIO</div>
+        <div className="text-gray-400 tracking-[0.2em] text-sm md:hidden">PORTFOLIO</div>
+        <div className="vertical-text text-gray-400 tracking-[0.2em] text-sm hidden md:block">PORTFOLIO</div>
       </div>
 
       {/* Main content */}
