@@ -2,19 +2,22 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin, Twitter, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import AboutSection from "@/components/about-section"
 import ContactSection from "@/components/contact-section"
+/* import EducationSection from "@/components/education-section"
+import ExperienceSection from "@/components/experience-section" */
 import { ResumeModal } from "@/components/resume-modal"
+import Footer from "@/components/footer"
 import SkillsSection from "@/components/skill-section"
 import ProjectsSection from "@/components/project-section"
-import Footer from "@/components/footer"
 
 export default function PortfolioLandingPage() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,15 @@ export default function PortfolioLandingPage() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [prevScrollPos])
 
+  const navLinks = [
+    { href: "#about", label: "ABOUT" },
+    { href: "#skills", label: "SKILLS" },
+    { href: "#education", label: "EDUCATION" },
+    { href: "#experience", label: "EXPERIENCE" },
+    { href: "#portfolio", label: "PORTFOLIO" },
+    { href: "#contact", label: "CONTACT" },
+  ]
+
   return (
     <div className="min-h-screen bg-[#1E242C] text-white pt-20">
       {/* Header */}
@@ -36,30 +48,17 @@ export default function PortfolioLandingPage() {
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="container mx-auto px-6 py-4 bg-[#1E242C]/90 backdrop-blur-sm">
+        <div className="container mx-auto px-4 sm:px-6 py-4 bg-[#1E242C]/90 backdrop-blur-sm">
           <nav className="flex justify-between items-center">
             <Link href="/" className="text-[#00FF7F]">
               <div className="h-12 w-12 bg-[#00FF7F] text-black flex items-center justify-center clip-hex">MC</div>
             </Link>
-            <div className="flex items-center gap-8">
-              <Link href="#about" className="hover:text-[#00FF7F]">
-                ABOUT
-              </Link>
-              <Link href="#skills" className="hover:text-[#00FF7F]">
-                SKILLS
-              </Link>
-              <Link href="#education" className="hover:text-[#00FF7F]">
-                EDUCATION
-              </Link>
-              <Link href="#experience" className="hover:text-[#00FF7F]">
-                EXPERIENCE
-              </Link>
-              <Link href="#portfolio" className="hover:text-[#00FF7F]">
-                PORTFOLIO
-              </Link>
-              <Link href="#contact" className="hover:text-[#00FF7F]">
-                CONTACT
-              </Link>
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="hover:text-[#00FF7F]">
+                  {link.label}
+                </Link>
+              ))}
               <Button
                 variant="outline"
                 className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black"
@@ -68,14 +67,49 @@ export default function PortfolioLandingPage() {
                 RESUME
               </Button>
             </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden text-[#00FF7F]"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X /> : <Menu />}
+            </Button>
           </nav>
         </div>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-[#1E242C] py-4">
+            <div className="container mx-auto px-4 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-white hover:text-[#00FF7F] py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Button
+                variant="outline"
+                className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black w-full"
+                onClick={() => {
+                  setIsResumeModalOpen(true)
+                  setMobileMenuOpen(false)
+                }}
+              >
+                RESUME
+              </Button>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 flex min-h-[calc(100vh-80px)]">
+      <section className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center min-h-[calc(100vh-80px)]">
         {/* Social Links Sidebar */}
-        <div className="fixed left-6 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+        <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col gap-6">
           <Link href="https://github.com" className="text-gray-400 hover:text-[#00FF7F]">
             <Github className="h-6 w-6" />
           </Link>
@@ -90,49 +124,53 @@ export default function PortfolioLandingPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="flex-1 flex flex-col justify-center max-w-4xl ml-24">
+        <div className="flex-1 flex flex-col justify-center md:ml-24 text-center md:text-left">
           <p className="text-[#00FF7F] text-xl mb-4">Hello! I am</p>
-          <h1 className="text-6xl font-bold mb-4">Marco Castillo</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Marco Castillo</h1>
           <div className="space-y-2 mb-8">
-            <h2 className="text-[#00FF7F] text-2xl font-semibold">Full Stack Developer</h2>
+            <h2 className="text-[#00FF7F] text-xl md:text-2xl font-semibold">Full Stack Developer</h2>
             <p className="text-gray-400">Web Developer • Programmer • Software Engineer</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button
-              className="bg-[#00FF7F] text-black hover:bg-[#00FF7F]/90"
+              className="bg-[#00FF7F] text-black hover:bg-[#00FF7F]/90 w-full sm:w-auto"
               onClick={() => setIsResumeModalOpen(true)}
             >
               Get Resume
             </Button>
-            <Button variant="outline" className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black">
+            <Button
+              variant="outline"
+              className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black w-full sm:w-auto"
+            >
               About Me
             </Button>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Mobile Social Icons */}
+      <div className="md:hidden flex justify-center space-x-6 mt-8">
+        <Link href="https://github.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Github className="h-6 w-6" />
+        </Link>
+        <Link href="https://linkedin.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Linkedin className="h-6 w-6" />
+        </Link>
+        <Link href="https://twitter.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Twitter className="h-6 w-6" />
+        </Link>
+      </div>
+
       <AboutSection onResumeClick={() => setIsResumeModalOpen(true)} />
-
-      {/* Skills Section */}
       <SkillsSection />
-
-      {/* Education Section */}
-      {/* <EducationSection /> */}
-
-      {/* Experience Section */}
-      {/* <ExperienceSection /> */}
-
-      {/* Projects Section */}
+      {/* <EducationSection />
+      <ExperienceSection /> */}
       <ProjectsSection />
-
-      {/* Contact Section */}
       <ContactSection />
+      <Footer />
 
-      {/* Resume Modal */}
       <ResumeModal isOpen={isResumeModalOpen} onClose={() => setIsResumeModalOpen(false)} />
 
-      <Footer />
       <style jsx global>{`
         .clip-hex {
           clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
@@ -145,4 +183,3 @@ export default function PortfolioLandingPage() {
     </div>
   )
 }
-

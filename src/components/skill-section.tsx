@@ -53,30 +53,32 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="relative min-h-screen bg-[#1E242C] py-20">
-      {/* Vertical "MY SKILLS" text */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2">
-        <div className="vertical-text text-gray-400 tracking-[0.2em] text-sm">MY SKILLS</div>
+      {/* "MY SKILLS" text */}
+      <div className="absolute left-0 right-0 top-8 md:left-6 md:top-1/2 md:-translate-y-1/2 text-center md:text-left">
+        <div className="text-gray-400 tracking-[0.2em] text-sm md:vertical-text md:rotate-180">MY SKILLS</div>
       </div>
 
       {/* Main content */}
       <div className="container mx-auto px-6">
-        <div className="ml-16">
+        <div className="md:ml-16">
           {/* Tabs */}
-          <div className="flex gap-4 mb-8">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={cn(
-                  "px-6 py-2 rounded border transition-colors duration-200",
-                  activeTab === tab
-                    ? "bg-[#00FF7F] border-[#00FF7F] text-black"
-                    : "border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black",
-                )}
-              >
-                {tab}
-              </button>
-            ))}
+          <div className="flex overflow-x-auto pb-2 mb-6 md:mb-8 -mx-6 px-6 md:px-0 md:-mx-0 md:overflow-x-visible">
+            <div className="flex gap-4 md:gap-4">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={cn(
+                    "px-6 py-2 rounded border transition-colors duration-200 whitespace-nowrap flex-shrink-0",
+                    activeTab === tab
+                      ? "bg-[#00FF7F] border-[#00FF7F] text-black"
+                      : "border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black",
+                  )}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Skills Grid */}

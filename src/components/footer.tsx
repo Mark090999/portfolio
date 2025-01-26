@@ -9,11 +9,11 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#1A1F25] py-4 px-6">
-      <div className="container mx-auto flex justify-between items-center">
+    <footer className="bg-[#1A1F25] py-4 px-4 sm:px-6">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         {/* Thanks in different languages */}
-        <div className="flex gap-4">
-          {/* <span className="text-white hover:text-[#00FF7F] cursor-pointer transition-colors">Tanks</span> */}
+        <div className="flex flex-wrap justify-center sm:justify-start gap-4">
+          {/* <span className="text-white hover:text-[#00FF7F] cursor-pointer transition-colors">ਧੰਨਵਾਦ</span> */}
         </div>
 
         {/* Right side links */}
