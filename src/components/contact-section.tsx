@@ -14,7 +14,7 @@ export default function ContactSection() {
           <div className="space-y-6">
             <p className="text-white text-lg leading-relaxed">
               I am interested in working with any company that thinks my skill will be helpful for them. If you are
-              looking for someone like me, please let me know. Or you can just 'say hi' to me.
+              looking for someone like me, please let me know. Or you can just &apos;say hi&apos; to me.
             </p>
             <Button className="bg-[#00FF7F] text-black hover:bg-[#00FF7F]/90 px-8 py-6 text-lg">Contact Me</Button>
           </div>

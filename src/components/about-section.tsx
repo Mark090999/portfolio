@@ -20,9 +20,9 @@ export default function AboutSection({ onResumeClick }: AboutSectionProps) {
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             <p className="text-white text-lg leading-relaxed">
-              Hello! I'm Zonayed Ahmed, a passionate software engineer. I develop web applications, mobile applications,
+              Hello! I&apos;m Zonayed Ahmed, a passionate software engineer. I develop web applications, mobile applications,
               and desktop applications. My core skill is based on JavaScript and I love to do most of the things using
-              JavaScript. I love to make the web more open to the world. I have graduated with a bachelor's degree in
+              JavaScript. I love to make the web more open to the world. I have graduated with a bachelor&apos;s degree in
               Computer Science Engineering from Chandigarh University at Punjab, India in 2020. I am available for any
               kind of job opportunity that suits my interests.
             </p>
