@@ -34,8 +34,6 @@ export default function PortfolioLandingPage() {
   const navLinks = [
     { href: "#about", label: "ABOUT" },
     { href: "#skills", label: "SKILLS" },
-    { href: "#education", label: "EDUCATION" },
-    { href: "#experience", label: "EXPERIENCE" },
     { href: "#portfolio", label: "PORTFOLIO" },
     { href: "#contact", label: "CONTACT" },
   ]
@@ -110,13 +108,13 @@ export default function PortfolioLandingPage() {
       <section className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center min-h-[calc(100vh-80px)]">
         {/* Social Links Sidebar */}
         <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col gap-6">
-          <Link href="https://github.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Link href="https://github.com/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
             <Github className="h-6 w-6" />
           </Link>
-          <Link href="https://linkedin.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Link href="https://linkedin.com/in/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
             <Linkedin className="h-6 w-6" />
           </Link>
-          <Link href="https://twitter.com" className="text-gray-400 hover:text-[#00FF7F]">
+          <Link href="https://twitter.com/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
             <Twitter className="h-6 w-6" />
           </Link>
           <div className="h-32 w-[2px] bg-gray-400 mx-auto mt-4"></div>

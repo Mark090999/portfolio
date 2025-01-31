@@ -20,11 +20,10 @@ export default function AboutSection({ onResumeClick }: AboutSectionProps) {
           <div className="space-y-6">
             <div className="text-center text-gray-400 tracking-[0.2em] text-sm md:hidden">ABOUT ME</div>
             <p className="text-white text-lg leading-relaxed">
-              Hello! I&apos;m Marco Castillo, a passionate software engineer. I develop web applications, mobile applications,
-              and desktop applications. My core skill is based on JavaScript and I love to do most of the things using
-              JavaScript. I love to make the web more open to the world. I have graduated with a bachelor&apos;s degree in
-              Computer Science Engineering from Chandigarh University at Punjab, India in 2020. I am available for any
-              kind of job opportunity that suits my interests.
+              Hello! I&apos;m Marco Castillo, a passionate software engineer with 5 years of experience in FullStack development, 
+              specialized in creating efficient and scalable technological solutions that meet the specific needs of businesses. 
+              Throughout my career, I have designed, implemented, and optimized systems for sectors such as insurance and enterprise management (ERP). 
+              I handle modern technologies like JavaScript (Node.js, React.js), Laravel, .NET Core, Flutter, and both relational and non-relational databases, with a focus on improving operational efficiency and user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button

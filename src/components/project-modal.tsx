@@ -30,19 +30,20 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-[#1A1F25] text-white border-gray-800">
+      <DialogContent className="max-w-4xl bg-[#1A1F25] text-white border-gray-800 h-full max-h-screen">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
           <DialogDescription className="text-gray-400">{project.description}</DialogDescription>
         </DialogHeader>
 
-        <div className="relative aspect-video mt-4 bg-[#1E242C] rounded-lg overflow-hidden">
+        {/* Contenedor para la imagen con el 60% de altura de la pantalla */}
+        <div className="relative mt-4 bg-[#1E242C] rounded-lg overflow-hidden h-[60vh]">
           <div className="absolute inset-0">
             <Image
               src={project.images[currentImageIndex] || "/placeholder.svg"}
               alt={`Project image ${currentImageIndex + 1}`}
               fill
-              className="object-contain"
+              className="object-cover" // Se ajusta la imagen para cubrir el área sin distorsión
             />
           </div>
 

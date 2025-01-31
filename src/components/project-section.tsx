@@ -10,19 +10,73 @@ const tabs = ["Web", "Others"] as const
 const projects = {
   Web: [
     {
+      title: "Novacita",
+      description: "Find a healthcare professional and schedule an appointment at your convenience.",
+      image: "/images/novacita/novacita.png?height=400&width=600",
+      technologies: ["Reactjs", "Laravel", "Ant Design"],
+      githubUrl: "#",
+      liveUrl: "https://novacita.com",
+      images: [
+        "/images/novacita/novacita.png?height=400&width=600",
+        "/images/novacita/novacita-1.png?height=400&width=600",
+      ],
+      longDescription:
+        "Find a specialist or healthcare professional of your choice and schedule an appointment with them at a date and time that is convenient for you.",
+    },
+    {
+      title: "Novacita App",
+      description: "Find a healthcare professional and schedule an appointment at your convenience.",
+      image: "/images/novacita/novacita-app.png?height=400&width=600",
+      technologies: ["Dart", "Flutter", "Android", "IOS"],
+      githubUrl: "#",
+      liveUrl: "https://play.google.com/store/apps/details?id=com.novacitasoft.novacita&pcampaignid=web_share",
+      images: [
+        "/images/novacita/novacita-app.png?height=400&width=600",
+      ],
+      longDescription:
+        "Find a specialist or healthcare professional of your choice and schedule an appointment with them at a date and time that is convenient for you.",
+    },
+    {
       title: "Mantis Speed",
       description: "Platform that connects people with professionals offering domestic services like cleaning, repairs, gardening, and childcare.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["gatsby", "netlify", "ga", "forestry"],
+      image: "/images/mantis-speed/mantis.png?height=400&width=600",
+      technologies: ["Nodejs", "Vuejs", "Laravel", "CoreUi"],
       githubUrl: "#",
       liveUrl: "#",
       images: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "/images/mantis-speed/mantis.png?height=800&width=600",
+        "/images/mantis-speed/mantis-1.png?height=800&width=600",
       ],
       longDescription:
         "Platform that connects people who need domestic services with professionals in the field. They offer a variety of services such as cleaning, gardening, repairs, childcare, and more. It's an easy way to find help for household tasks.",
+    },
+    {
+      title: "Mantis Speed App",
+      description: "Platform that connects people with professionals offering domestic services like cleaning, repairs, gardening, and childcare.",
+      image: "/images/mantis-speed/mantis-app.png?height=400&width=600",
+      technologies: ["Dart", "Flutter", "Android", "IOS"],
+      githubUrl: "#",
+      liveUrl: "#",
+      images: [
+        "/images/mantis-speed/mantis-app.png?height=800&width=600",
+        "/images/mantis-speed/mantis-app-1.png?height=800&width=600",
+      ],
+      longDescription:
+        "Platform that connects people who need domestic services with professionals in the field. They offer a variety of services such as cleaning, gardening, repairs, childcare, and more. It's an easy way to find help for household tasks.",
+    },
+    {
+      title: "Jexa Jeans",
+      description: "Platform that connects people with professionals offering domestic services like cleaning, repairs, gardening, and childcareA sales and inventory system helps businesses track sales and manage inventory in real-time, providing reports for better decision-making and operational efficiency.",
+      image: "/images/jexa-jeans/jexa.png?height=400&width=600",
+      technologies: ["Dart", "Flutter", "Android", "IOS"],
+      githubUrl: "#",
+      liveUrl: "#",
+      images: [
+        "/images/jexa-jeans/jexa.png?height=800&width=600",
+        "/images/jexa-jeans/jexa-1.png?height=800&width=600",
+      ],
+      longDescription:
+        "A sales and inventory system is a digital tool that helps businesses manage sales transactions and inventory levels efficiently. It tracks sales, updates stock in real-time, and generates detailed reports on product performance and stock trends.",
     },
   ],
   Others: [

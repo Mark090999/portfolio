@@ -26,30 +26,30 @@ export default function ContactSection() {
             <div>
               <h3 className="text-white text-2xl mb-2">Email</h3>
               <p className="text-white">
-                asfasf@gmail.com <span className="text-gray-400">(Recommended)</span>
+                ccmarco090999@gmail.com <span className="text-gray-400">(Recommended)</span>
               </p>
             </div>
 
             {/* Skype */}
-            <div>
+            {/* <div>
               <h3 className="text-white text-2xl mb-2">Skype</h3>
               <p className="text-white">
                 asfasfa <span className="text-gray-400">(Always Available)</span>
               </p>
-            </div>
+            </div> */}
 
             {/* Social */}
             <div>
               <h3 className="text-white text-2xl mb-2">Social</h3>
               <p className="text-white">
-                Facebook/Twitter - @asfsafasf <span className="text-gray-400">(Slow response)</span>
+                Twitter - @mark090999 <span className="text-gray-400">(Slow response)</span>
               </p>
             </div>
 
             {/* Address */}
             <div>
               <h3 className="text-white text-2xl mb-2">Address</h3>
-              <p className="text-white">Gouripur, Daudkandi, Cumilla, Bangladesh - 3517</p>
+              <p className="text-white">Quito, Ecuador</p>
             </div>
           </div>
         </div>
