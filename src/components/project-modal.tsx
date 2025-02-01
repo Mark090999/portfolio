@@ -30,14 +30,14 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-[#1A1F25] text-white border-gray-800 h-full max-h-screen">
+      <DialogContent className="max-w-md sm:max-w-4xl bg-[#1A1F25] text-white border-gray-800 h-full max-h-screen overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
-          <DialogDescription className="text-gray-400">{project.description}</DialogDescription>
+          <DialogTitle className="text-xl sm:text-2xl font-bold">{project.title}</DialogTitle>
+          <DialogDescription className="text-gray-400 text-sm sm:text-base">{project.description}</DialogDescription>
         </DialogHeader>
 
-        {/* Contenedor para la imagen con el 60% de altura de la pantalla */}
-        <div className="relative mt-4 bg-[#1E242C] rounded-lg overflow-hidden h-[60vh]">
+        {/* Contenedor para la imagen con altura ajustada */}
+        <div className="relative mt-4 bg-[#1E242C] rounded-lg overflow-hidden sm:h-[60vh] h-[50vh] max-h-[60vh]">
           <div className="absolute inset-0">
             <Image
               src={project.images[currentImageIndex] || "/placeholder.svg"}
@@ -79,7 +79,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         </div>
 
         <div className="mt-4 text-gray-300">
-          <p className="leading-relaxed">{project.longDescription}</p>
+          <p className="leading-relaxed text-sm sm:text-base">{project.longDescription}</p>
         </div>
       </DialogContent>
     </Dialog>
