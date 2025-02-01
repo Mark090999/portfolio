@@ -37,16 +37,16 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         </DialogHeader>
 
         {/* Contenedor para la imagen con altura ajustada */}
-        <div className="relative mt-4 bg-[#1E242C] rounded-lg overflow-hidden sm:h-[60vh] h-[50vh] max-h-[60vh]">
+        <div className="relative mt-4 bg-[#1E242C] rounded-lg overflow-hidden sm:h-[60vh] h-[40vh] max-h-[60vh]">
           <div className="absolute inset-0">
             <Image
               src={project.images[currentImageIndex] || "/placeholder.svg"}
               alt={`Project image ${currentImageIndex + 1}`}
               fill
-              className="object-cover" // Se ajusta la imagen para cubrir el área sin distorsión
+              className="object-contain w-full h-full"
             />
           </div>
-
+          {/* Los botones de navegación */}
           <Button
             variant="ghost"
             size="icon"
@@ -69,14 +69,14 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
             {project.images.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentImageIndex ? "bg-[#00FF7F]" : "bg-gray-500"
-                }`}
+                className={`w-2 h-2 rounded-full transition-colors ${index === currentImageIndex ? "bg-[#00FF7F]" : "bg-gray-500"
+                  }`}
                 onClick={() => setCurrentImageIndex(index)}
               />
             ))}
           </div>
         </div>
+
 
         <div className="mt-4 text-gray-300">
           <p className="leading-relaxed text-sm sm:text-base">{project.longDescription}</p>

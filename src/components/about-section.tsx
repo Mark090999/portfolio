@@ -19,7 +19,7 @@ export default function AboutSection({ onResumeClick }: AboutSectionProps) {
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             <div className="text-center text-gray-400 tracking-[0.2em] text-sm md:hidden">ABOUT ME</div>
-            <p className="text-white text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed text-justify">
               Hello! I&apos;m Marco Castillo, a passionate software engineer with 5 years of experience in FullStack development, 
               specialized in creating efficient and scalable technological solutions that meet the specific needs of businesses. 
               Throughout my career, I have designed, implemented, and optimized systems for sectors such as insurance and enterprise management (ERP). 

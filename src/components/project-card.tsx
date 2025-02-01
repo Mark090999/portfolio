@@ -28,7 +28,8 @@ export function ProjectCard({
           src={image || "/placeholder.svg"}
           alt={title}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className="object-contain w-full h-full"
+          //className="object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
       <div className="p-6 space-y-4">
