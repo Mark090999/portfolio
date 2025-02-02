@@ -44,6 +44,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
               alt={`Project image ${currentImageIndex + 1}`}
               fill
               className="object-contain w-full h-full"
+              priority
             />
           </div>
           {/* Los botones de navegación */}

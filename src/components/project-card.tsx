@@ -3,11 +3,14 @@ import Link from "next/link"
 import Image from "next/image"
 
 interface ProjectCardProps {
+  id: number
   title: string
   description: string
+  longDescription: string
   image: string
+  images: string[]
   technologies: string[]
-  type: string  // Nuevo campo para el tipo de proyecto
+  type: string
   githubUrl?: string
   liveUrl?: string
   onClick: () => void
@@ -18,7 +21,7 @@ export function ProjectCard({
   description,
   image,
   technologies,
-  type,  // Recibe el tipo de proyecto
+  type,
   githubUrl,
   liveUrl,
   onClick,

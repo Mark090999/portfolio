@@ -6,10 +6,23 @@ import { supabase } from "@/lib/supabase"
 
 const tabs = ["Projects"] as const
 
+interface ProjectCardProps {
+  id: number
+  title: string
+  description: string
+  longDescription: string
+  image: string
+  images: string[]
+  technologies: string[]
+  type: string
+  githubUrl?: string
+  liveUrl?: string
+}
+
 export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Projects")
-  const [projects, setProjects] = useState<any[]>([])  // Cambié la definición de projects
-  const [selectedProject, setSelectedProject] = useState<null | any>(null) // Cambié la definición de selectedProject
+  const [projects, setProjects] = useState<ProjectCardProps[]>([])  // Cambié la definición de projects
+  const [selectedProject, setSelectedProject] = useState<null | ProjectCardProps>(null) // Cambié la definición de selectedProject
 
   useEffect(() => {
     const fetchProjects = async () => {
