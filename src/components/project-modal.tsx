@@ -13,7 +13,7 @@ interface ProjectModalProps {
     title: string
     description: string
     images: string[]
-    longDescription: string
+    long_description: string
   }
 }
 
@@ -80,7 +80,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
 
 
         <div className="mt-4 text-gray-300">
-          <p className="leading-relaxed text-sm sm:text-base">{project.longDescription}</p>
+          <p className="leading-relaxed text-sm sm:text-base">{project.long_description}</p>
         </div>
       </DialogContent>
     </Dialog>

@@ -6,7 +6,7 @@ interface ProjectCardProps {
   id: number
   title: string
   description: string
-  longDescription: string
+  long_description: string
   image: string
   images: string[]
   technologies: string[]
