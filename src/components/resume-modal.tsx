@@ -135,7 +135,7 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         {isFileAvailable && (
           <div className="mt-4 text-center">
             <a
-              href="https://qkyaigeccoxcigkweqmu.supabase.co/storage/v1/object/public/portfolio//cv.pdf"  // Reemplaza con la URL real del archivo
+              href={process.env.NEXT_PUBLIC_RESUME_URL}  // Reemplaza con la URL real del archivo
               download
               target="_blank"
               className="text-lg text-[#00FF7F] underline"

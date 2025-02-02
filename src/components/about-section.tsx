@@ -35,6 +35,12 @@ export default function AboutSection({ onResumeClick }: AboutSectionProps) {
               <Button
                 variant="outline"
                 className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black w-full sm:w-auto"
+                onClick={() => {
+                  const element = document.getElementById("skills")
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
               >
                 My Skills
               </Button>

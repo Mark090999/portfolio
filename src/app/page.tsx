@@ -139,6 +139,12 @@ export default function PortfolioLandingPage() {
             <Button
               variant="outline"
               className="border-[#00FF7F] text-[#00FF7F] hover:bg-[#00FF7F] hover:text-black w-full sm:w-auto"
+              onClick={() => {
+                const element = document.getElementById("about")
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               About Me
             </Button>
@@ -148,13 +154,13 @@ export default function PortfolioLandingPage() {
 
       {/* Mobile Social Icons */}
       <div className="md:hidden flex justify-center space-x-6 mt-8">
-        <Link href="https://github.com" className="text-gray-400 hover:text-[#00FF7F]">
+        <Link href="https://github.com/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
           <Github className="h-6 w-6" />
         </Link>
-        <Link href="https://linkedin.com" className="text-gray-400 hover:text-[#00FF7F]">
+        <Link href="https://linkedin.com/in/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
           <Linkedin className="h-6 w-6" />
         </Link>
-        <Link href="https://twitter.com" className="text-gray-400 hover:text-[#00FF7F]">
+        <Link href="https://twitter.com/mark090999" className="text-gray-400 hover:text-[#00FF7F]">
           <Twitter className="h-6 w-6" />
         </Link>
       </div>

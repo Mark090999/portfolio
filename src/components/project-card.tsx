@@ -7,6 +7,7 @@ interface ProjectCardProps {
   description: string
   image: string
   technologies: string[]
+  type: string  // Nuevo campo para el tipo de proyecto
   githubUrl?: string
   liveUrl?: string
   onClick: () => void
@@ -17,6 +18,7 @@ export function ProjectCard({
   description,
   image,
   technologies,
+  type,  // Recibe el tipo de proyecto
   githubUrl,
   liveUrl,
   onClick,
@@ -29,11 +31,15 @@ export function ProjectCard({
           alt={title}
           fill
           className="object-contain w-full h-full"
-          //className="object-cover transition-transform duration-300 group-hover:scale-110"
+          priority
         />
       </div>
       <div className="p-6 space-y-4">
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <div className="flex items-center gap-2">
+          {/* Aquí agregamos el badge de tipo */}
+          <span className="text-xs text-gray-200 bg-[#333] px-2 py-1 rounded-full">{type}</span>
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+        </div>
         <p className="text-gray-400 line-clamp-2">{description}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
